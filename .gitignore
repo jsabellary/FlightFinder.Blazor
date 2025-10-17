@@ -1,0 +1,38 @@
+## Blazor WebAssembly
+bin/
+obj/
+*.user
+.vs/
+.vscode/
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+## Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+## Others
+*.dll
+*.pdb
+*.cache
+project.lock.json
+project.fragment.lock.json
+artifacts/

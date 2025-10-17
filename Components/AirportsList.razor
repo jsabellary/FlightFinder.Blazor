@@ -1,0 +1,30 @@
+﻿@inject HttpClient Http
+
+<datalist id="airports">
+    @foreach (var airport in airports)
+    {
+        <option value="@airport.Code">@airport.DisplayName (@airport.Code)</option>
+    }
+</datalist>
+
+@code
+{
+    private Airport[] airports = Array.Empty<Airport>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var response = await Http.GetAsync("api/airports");
+            if (response.IsSuccessStatusCode)
+            {
+                airports = await response.Content.ReadFromJsonAsync<Airport[]>() ?? Array.Empty<Airport>();
+            }
+        }
+        catch (Exception)
+        {
+            // API not available or returned invalid data - continue with empty airport list
+            airports = Array.Empty<Airport>();
+        }
+    }
+}
