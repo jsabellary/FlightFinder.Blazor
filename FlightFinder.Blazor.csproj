@@ -15,4 +15,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="FlightFinder.Shared.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

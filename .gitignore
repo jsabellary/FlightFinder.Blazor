@@ -30,7 +30,6 @@ bld/
 !**/packages/build/
 
 ## Others
-*.dll
 *.pdb
 *.cache
 project.lock.json
