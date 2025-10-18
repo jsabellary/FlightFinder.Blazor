@@ -4,8 +4,8 @@ namespace FlightFinder.Shared
 {
     public class SearchCriteria
     {
-        public string FromAirport { get; set; }
-        public string ToAirport { get; set; }
+        public string FromAirport { get; set; } = string.Empty;
+        public string ToAirport { get; set; } = string.Empty;
         public DateTime OutboundDate { get; set; }
         public DateTime ReturnDate { get; set; }
         public TicketClass TicketClass { get; set; }
