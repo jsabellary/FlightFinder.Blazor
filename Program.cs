@@ -13,7 +13,7 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 // Root component mounting point matches #app in wwwroot/index.html
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<Microsoft.AspNetCore.Components.Web.HeadOutlet>("head::after");
-
+//
 // Register HttpClient for DI with base address from configuration
 builder.Services.AddScoped(sp => 
 {
