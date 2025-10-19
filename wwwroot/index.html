@@ -7,6 +7,44 @@
     <base href="/" />
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/site.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #app {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        
+        #blazor-error-ui {
+            background: lightyellow;
+            bottom: 0;
+            box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+            display: none;
+            left: 0;
+            padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        #blazor-error-ui .dismiss {
+            cursor: pointer;
+            position: absolute;
+            right: 0.75rem;
+            top: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -15,10 +53,10 @@
         </div>
     </div>
 
-    <div id="blazor-error-ui" style="display: none; position: fixed; top: 0; width: 100%; background: #dc3545; color: white; padding: 1rem; z-index: 9999;">
-        An error has occurred. Reload the page.
-        <a href="" style="color: white; text-decoration: underline;">Reload</a>
-        <span style="float: right; cursor: pointer;" onclick="document.getElementById('blazor-error-ui').style.display='none'">✕</span>
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>

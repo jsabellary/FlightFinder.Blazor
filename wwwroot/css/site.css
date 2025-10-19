@@ -12,6 +12,15 @@ html {
 body {
   height: 100%;
   display: flex;
+  justify-content: center;
+  background-color: #e8e8e8;
+}
+
+#app {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin: 0 40px;
 }
 
 #search-and-results-area {
