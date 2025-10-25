@@ -1,22 +1,23 @@
-﻿<div class="container py-5">
+﻿<div class="container-fluid py-2">
     <!-- Airport selection -->
-    <div class="row mb-4">
+    <div class="row mb-2">
         <!-- From airport -->
         <div class="col-md-5">
-            <div class="input-group">
+            <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><i>✈</i>&nbsp;From</span>
+                    <span class="input-group-text"><i class="bi bi-airplane-fill"></i>&nbsp;From</span>
                 </div>
-                <input list="airports" placeholder="Airport code..." class="form-control" @bind="criteria.FromAirport" />
+                <input list="airports" placeholder="Airport code..." class="form-control"
+                    @bind="criteria.FromAirport" />
             </div>
         </div>
         <div class="col-md-1 text-center align-self-center">➝</div>
 
         <!-- To airport -->
         <div class="col-md-5">
-            <div class="input-group">
+            <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><i>✈</i>&nbsp;To</span>
+                    <span class="input-group-text"><i class="bi bi-airplane-fill"></i>&nbsp;To</span>
                 </div>
                 <input list="airports" placeholder="Airport code..." class="form-control" @bind="criteria.ToAirport" />
             </div>
@@ -24,12 +25,12 @@
     </div>
 
     <!-- Departure / return dates -->
-    <div class="row mb-4">
+    <div class="row mb-2">
         <!-- Depart date -->
         <div class="col-md-5">
-            <div class="input-group">
+            <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><i>🗓</i>&nbsp;Depart</span>
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i>&nbsp;Depart</span>
                 </div>
                 <input type="date" @bind="criteria.OutboundDate" @bind:format="yyyy-MM-dd" class="form-control" />
             </div>
@@ -38,9 +39,9 @@
 
         <!-- Return date -->
         <div class="col-md-5">
-            <div class="input-group">
+            <div class="input-group input-group-sm">
                 <div class="input-group-prepend">
-                    <span class="input-group-text"><i>🗓</i>&nbsp;Return</span>
+                    <span class="input-group-text"><i class="bi bi-calendar-event"></i>&nbsp;Return</span>
                 </div>
                 <input type="date" @bind="criteria.ReturnDate" @bind:format="yyyy-MM-dd" class="form-control" />
             </div>
@@ -48,9 +49,9 @@
     </div>
 
     <!-- Class / search -->
-    <div class="row mb-4">
+    <div class="row mb-2">
         <div class="col-md-6">
-            <select class="custom-select" @bind="criteria.TicketClass">
+            <select class="custom-select custom-select-sm" @bind="criteria.TicketClass">
                 <option value=@TicketClass.Economy>Economy</option>
                 <option value=@TicketClass.PremiumEconomy>Premium Economy</option>
                 <option value=@TicketClass.Business>Business</option>
@@ -58,8 +59,9 @@
             </select>
         </div>
         <div class="col-md-6 text-md-right">
-            <button @onclick="() => OnSearch.InvokeAsync(criteria)" type="button" class="btn btn-primary btn-block">
-                <strong>Search ➝</strong>
+            <button @onclick="() => OnSearch.InvokeAsync(criteria)" type="button"
+                class="btn btn-light btn-sm btn-block font-weight-bold">
+                Search ➝
             </button>
         </div>
     </div>
