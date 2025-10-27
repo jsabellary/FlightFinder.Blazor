@@ -10,9 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FlightFinder.Shared">
-      <HintPath>..\FlightFinder.Shared\bin\Release\netstandard2.1\FlightFinder.Shared.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="FlightFinder.Shared\FlightFinder.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
